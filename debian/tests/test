@@ -1,0 +1,33 @@
+#!/bin/sh
+
+set -e
+
+testdir=$(mktemp -d)
+trap "rm -rf ${testdir}" 0 INT QUIT ABRT PIPE TERM
+
+cp -r "$(dirname "$0")/../../example" "${testdir}/example"
+
+cd "${testdir}/example"
+
+cat <<'EOF' > qcheck-examples.opam
+opam-version: "1.2"
+name: "qcheck-examples"
+version: "0"
+depends: ["qcheck" "oUnit"]
+EOF
+
+sed -i 's/package qcheck/package qcheck-examples/' dune
+sed -i 's/package qcheck-ounit/package qcheck-examples/' ounit/dune
+rm -rf alcotest
+
+for test in QCheck_runner_test.exe ounit/QCheck_ounit_test.exe ounit/QCheck_test.exe
+do
+	dune build -p qcheck-examples $test
+
+	if [ -x "_build/default/$test" ]; then
+		echo "built $test"
+	else
+		echo "$test does not exist"
+		exit 1
+	fi
+done

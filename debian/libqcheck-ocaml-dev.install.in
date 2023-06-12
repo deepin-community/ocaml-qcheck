@@ -1,0 +1,7 @@
+@OCamlStdlibDir@/qcheck/dune-package
+@OCamlStdlibDir@/qcheck/*.cmi
+@OCamlStdlibDir@/qcheck/*.cmt
+@OCamlStdlibDir@/qcheck/*.ml
+OPT: @OCamlStdlibDir@/qcheck/*.a
+OPT: @OCamlStdlibDir@/qcheck/*.cmxa
+OPT: @OCamlStdlibDir@/qcheck/*.cmx
