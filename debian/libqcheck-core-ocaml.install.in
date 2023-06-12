@@ -1,0 +1,6 @@
+@OCamlStdlibDir@/qcheck-core/{,**/}META
+@OCamlStdlibDir@/qcheck-core/{,**/}opam
+@OCamlStdlibDir@/qcheck-core/{,**/}*.cma
+DYN: @OCamlStdlibDir@/qcheck-core/{,**/}*.cmxs
+
+usr/doc/qcheck-core/{README.adoc} /usr/share/doc/qcheck-core/

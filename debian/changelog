@@ -1,5 +1,95 @@
-template-repository (1.0-1) unstable; urgency=medium
+ocaml-qcheck (0.20-1) unstable; urgency=medium
 
-  * Initial release
+  [ Stéphane Glondu ]
+  * Team upload
+  * New upstream release
 
- -- Tsic404 <liuheng@deepin.org>  Sat, 28 Jan 2023 13:46:49 +0800
+  [ Debian Janitor ]
+  * Set upstream metadata fields: Bug-Submit
+  * debian/watch: Use GitHub /tags rather than /releases page
+  * Remove obsolete field Name from debian/upstream/metadata
+  * Update standards version to 4.6.1
+
+ -- Stéphane Glondu <glondu@debian.org>  Sat, 04 Feb 2023 06:46:04 +0100
+
+ocaml-qcheck (0.18.1-2) unstable; urgency=medium
+
+  * Team upload
+  * Ignore test failures
+
+ -- Stéphane Glondu <glondu@debian.org>  Mon, 21 Feb 2022 13:55:15 +0100
+
+ocaml-qcheck (0.18.1-1) unstable; urgency=medium
+
+  * Team upload
+  * New upstream release
+  * Build-Depend on alcotest and enable tests
+
+ -- Stéphane Glondu <glondu@debian.org>  Mon, 21 Feb 2022 04:37:32 +0100
+
+ocaml-qcheck (0.18-2) unstable; urgency=medium
+
+  * Team upload
+  * Fix autopkgtest
+
+ -- Stéphane Glondu <glondu@debian.org>  Sat, 11 Dec 2021 23:28:43 +0100
+
+ocaml-qcheck (0.18-1) unstable; urgency=medium
+
+  * Team upload
+  * New upstream release
+  * Bump Standards-Version to 4.6.0
+  * Update debian/watch
+
+ -- Stéphane Glondu <glondu@debian.org>  Tue, 30 Nov 2021 08:37:34 +0100
+
+ocaml-qcheck (0.15-1) unstable; urgency=medium
+
+  * Team upload
+  * New upstream release
+
+ -- Stéphane Glondu <glondu@debian.org>  Mon, 21 Sep 2020 06:53:06 +0200
+
+ocaml-qcheck (0.14-1) unstable; urgency=medium
+
+  * Team upload
+  * New upstream release
+  * Bump debhelper compat level to 13
+  * Bump Standards-Version to 4.5.0
+  * Add Rules-Requires-Root: no
+
+ -- Stéphane Glondu <glondu@debian.org>  Mon, 17 Aug 2020 13:54:37 +0200
+
+ocaml-qcheck (0.11-1) unstable; urgency=medium
+
+  * New upstream release.
+  * Bump Standards-Version to 4.4.1 (no changes).
+
+ -- Andy Li <andy@onthewings.net>  Sat, 09 Nov 2019 14:36:01 +0800
+
+ocaml-qcheck (0.9-2) unstable; urgency=medium
+
+  * Fix install file name for building with the latest version of dune.
+
+ -- Andy Li <andy@onthewings.net>  Mon, 12 Aug 2019 08:27:52 +0800
+
+ocaml-qcheck (0.9-1) unstable; urgency=medium
+
+  * New upstream release.
+    + qcheck was split into qcheck, qcheck-core, and qcheck-ounit.
+    + Update autopkgtests to build with the new examples.
+  * Improve d/rules.
+    + Use dune instead of jbuilder in d/rules.
+    + Explicitly state what packages to be built. qcheck-alcotest was excluded
+      since alcotest has not been packaged in Debian.
+  * Bump Standards-Version to 4.3.0 (no changes).
+  * Mark libqcheck-ocaml-doc as Multi-Arch: foreign.
+  * Replace Build-Depends: opam with opam-installer, which is more accurate.
+
+ -- Andy Li <andy@onthewings.net>  Thu, 31 Jan 2019 19:52:24 +0800
+
+ocaml-qcheck (0.8-1) unstable; urgency=medium
+
+  * Initial release. (Closes: #903371)
+
+ -- Andy Li <andy@onthewings.net>  Wed, 15 Aug 2018 10:14:09 +0800
